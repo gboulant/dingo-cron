@@ -1,7 +1,13 @@
 all: test
 
-test:
+test.pkg:
 	@go test ${GOTEST_OPTIONS}
+
+test.cmd: go.mod
+	@make -C demos/demo.cron.01.crontab test
+
+test: test.pkg
+testall: test.pkg test.cmd
 
 # -----------------------------------------------------------------------
 # Module management
@@ -14,5 +20,6 @@ go.mod:
 # Clean the workspace
 clean:
 	@rm -f go.mod go.sum *~
+	@make -C demos/demo.cron.01.crontab clean
 
 
