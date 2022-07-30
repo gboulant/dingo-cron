@@ -19,7 +19,7 @@ go.mod:
 # -----------------------------------------------------------------------
 # Clean the workspace
 clean:
-	@rm -f go.mod go.sum *~
+	@rm -f *~
 	@make -C demos/demo.cron.01.crontab clean
 
 
