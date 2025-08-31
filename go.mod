@@ -1,3 +1,3 @@
-module galuma.net/systemd/cron
+module github.com/gboulant/dingo-cron
 
 go 1.18

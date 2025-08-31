@@ -4,9 +4,7 @@ build:
 	@go build
 
 test: build
-
-exec: build
-	@./crontab
+	@./demo.cron.01.crontab
 
 clean:
 	@rm -f *~

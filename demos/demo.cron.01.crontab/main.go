@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"galuma.net/systemd/cron"
+
+	cron "github.com/gboulant/dingo-cron"
 )
 
 func writedata() {
