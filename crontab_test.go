@@ -10,7 +10,7 @@ import (
 func TestCrontabPrint(t *testing.T) {
 	LogActivate(false)
 
-	cron := crontab{}
+	cron := NewCrontab()
 
 	// Add a cron task in the cron table is quite simple
 	date, _ := time.Parse("02 Jan 2006 15:04:05", "01 Nov 2020 15:23:30")
@@ -36,7 +36,7 @@ func TestCrontabExec(t *testing.T) {
 		t.Skip("RUN_LONG_TEST != 1 ==> SKIP")
 	}
 
-	cron := crontab{}
+	cron := NewCrontab()
 
 	cron.Add(func() { logger.Println("Hello, task 01 is working") }).
 		WithName("task01").
